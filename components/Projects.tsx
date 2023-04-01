@@ -40,7 +40,7 @@ function Projects({ projects }: Props) {
                 viewport={{ once: true }}
               >
                 <Image
-                  className="h-48 w-48 rounded-[8px] md:h-60 md:w-60"
+                  className="w-48 h-48 rounded-[8px] md:h-60 md:w-60"
                   src={urlFor(project.image).url()}
                   alt=""
                   width={500}
@@ -66,7 +66,7 @@ function Projects({ projects }: Props) {
                     ))
                   : ""}
               </div>
-              <p className="tet-center md:text-left text-lg">
+              <p className="tet-center md:text-left text-lg max-w-[300px]">
                 {project.description}
               </p>
             </div>
