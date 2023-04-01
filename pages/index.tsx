@@ -1,7 +1,6 @@
 import Head from "next/head"
 import Link from "next/link"
 import Image from "next/image"
-import { Inter } from "next/font/google"
 import Header from "@/components/Header"
 import Hero from "@/components/Hero"
 import About from "@/components/About"
