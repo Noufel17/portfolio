@@ -41,19 +41,20 @@ export default function Home({
 }: Props) {
   return (
     <div
-      className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
-    overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-500/20 
-    scrollbar-thumb-[#F7AB0A]/80 scroll-smooth"
+      className=" bg-primary-black text-white h-screen snap-y snap-mandatory 
+    overflow-y-scroll overflow-x-hidden z-0 scrollbar
+    scrollbar-thumb-[#F7AB0A]/50 scroll-smooth"
     >
       <Head>
         <title>Noufel website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/noufel.png" />
       </Head>
       <Header />
       <section id="hero" className="snap-start ">
         <Hero />
       </section>
+
       <section id="about" className="snap-center">
         <About about={about} />
       </section>

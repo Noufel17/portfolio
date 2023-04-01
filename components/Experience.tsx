@@ -20,6 +20,7 @@ function Experience({ experiences }: Props) {
       className="relative flex flex-col overflow-hidden h-screen text-left items-center
        max-w-full mx-auto justify-center gap-4"
     >
+      <div className="gradient-04 z-0"></div>
       <h3 className="absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
         Experience
       </h3>

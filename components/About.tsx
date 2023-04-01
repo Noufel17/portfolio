@@ -21,6 +21,7 @@ function About({ about }: Props) {
       md:flex-row max-w-7xl px-10 justify-center gap-8 mx-auto
        items-center"
     >
+      <div className="gradient-02 z-0"></div>
       <h3 className="absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
         About
       </h3>

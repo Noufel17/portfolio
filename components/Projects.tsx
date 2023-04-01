@@ -1,7 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Project } from "@/typings"
+import { Project, Image as image } from "@/typings"
 import { urlFor } from "@/sanity"
 type Props = {
   projects: Project[]
@@ -15,7 +15,7 @@ function Projects({ projects }: Props) {
       <h3 className="absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[400px] -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] footer-gradient left-0 h-[400px] -skew-y-12"></div>
       <div
         className="relative overflow-x-scroll overflow-y-hidden w-full flex snap-x snap-mandatory
       z-20 scrollbar-track-gray-500/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin"
@@ -51,6 +51,20 @@ function Projects({ projects }: Props) {
                 <h4 className="text-4xl font-semibold text-center">
                   {project.title}
                 </h4>
+              </div>
+              <div className="flex space-x-2 my-2">
+                {project.technologies
+                  ? project.technologies.map((tech: image, index) => (
+                      <Image
+                        key={index}
+                        className="flex-shrink-0 w-8 h-8 rounded-full object-cover object-center"
+                        src={urlFor(tech).url()}
+                        alt=""
+                        width={500}
+                        height={500}
+                      />
+                    ))
+                  : ""}
               </div>
               <p className="tet-center md:text-left text-lg">
                 {project.description}

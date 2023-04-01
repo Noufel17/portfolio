@@ -25,6 +25,7 @@ function Header({}: Props) {
         }}
         className="flex flex-row items-center"
       >
+        <div className="absolute w-[50%] inset-0 gradient-01" />
         <SocialIcon
           url="https://web.facebook.com/Noufel17/"
           fgColor="gray"

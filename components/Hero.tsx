@@ -29,6 +29,7 @@ function Hero({}: Props) {
         width={128}
         height={128}
       />
+      <div className="hero-gradient z-0"></div>
       <div className="z-20">
         <h2 className="text-sm text-gray-500 pb-6 tracking-[10px]">
           SOFTWARE ENGINEERING STUDENT
@@ -40,9 +41,6 @@ function Hero({}: Props) {
         <nav className="pt-5">
           <Link href="#about">
             <button className="nav_btn">About</button>
-          </Link>
-          <Link href="#education">
-            <button className="nav_btn">Education</button>
           </Link>
           <Link href="#experience">
             <button className="nav_btn">Experience</button>

@@ -20,6 +20,7 @@ function Contact({ contactInfo }: Props) {
       className="h-screen flex flex-col relative md:flex-row justify-center gap-4
    items-center mx-auto max-w-7xl text-center md:text-left px-10"
     >
+      <div className="footer-gradient" />
       <h3 className="uppercase text-2xl tracking-[10px] top-24 absolute text-gray-500">
         Contact
       </h3>

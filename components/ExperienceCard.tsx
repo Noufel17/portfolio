@@ -19,7 +19,7 @@ function ExperienceCard({ experience }: Props) {
       viewport={{ once: true }}
       className="rounded-lg items-center flex flex-col justify-start flex-shrink-0 space-y-3 p-5
         w-[320px] md:w-[400px] lg:w-[500px] snap-center bg-[#292929] cursor-pointer
-        hover:bg-[#464646] transition-colors duration-[400ms]"
+        hover:bg-primary-black transition-colors duration-[400ms] glassmorphism"
     >
       <motion.div
         initial={{
@@ -45,16 +45,18 @@ function ExperienceCard({ experience }: Props) {
         <h4 className="text-2xl font-light text-left">{experience.position}</h4>
         <p className="text-xl font-bold">{experience.company}</p>
         <div className="flex space-x-2 my-2">
-          {experience.technologies.map((tech: image, index) => (
-            <Image
-              key={index}
-              className="h-8 w-8"
-              src={urlFor(tech).url()}
-              alt=""
-              width={500}
-              height={500}
-            />
-          ))}
+          {experience.technologies
+            ? experience.technologies.map((tech: image, index) => (
+                <Image
+                  key={index}
+                  className="flex-shrink-0 w-8 h-8 rounded-full object-cover object-center"
+                  src={urlFor(tech).url()}
+                  alt=""
+                  width={500}
+                  height={500}
+                />
+              ))
+            : ""}
         </div>
         <p className="text-md text-gray-300 py-5 uppercase">
           Started {experience.startDate} to {experience.endDate}

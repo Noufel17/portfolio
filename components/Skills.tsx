@@ -20,6 +20,7 @@ function Skills({ skills }: Props) {
       className="relative flex flex-col overflow-hidden min-h-screen text-center items-center
        max-w-full mx-auto justify-center xl:px-10"
     >
+      <div className="gradient-05 z-0"></div>
       <h3 className="absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
         Skills
       </h3>
