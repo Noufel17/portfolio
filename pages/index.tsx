@@ -22,7 +22,7 @@ import {
   Skill as skill,
   ContactInfo as contactInfo,
 } from "@/typings"
-import { GetStaticProps } from "next"
+import { GetServerSideProps, GetStaticProps } from "next"
 type Props = {
   experiences: experience[]
   about: about
@@ -86,7 +86,7 @@ export default function Home({
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const experiences: experience[] = await fetchExperience()
   const about: about = await fetchAbout()
   const skills: skill[] = await fetchSkills()
@@ -101,6 +101,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       contactInfo,
       projects,
     },
-    revalidate: 5,
   }
 }
